@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <p class="web-title"></p>
+        </header>
+
+        <!-- Loading -->
+        <div class="lds-roller hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Global errors -->
+        <div class="global-errors hidden"></div>
+
+        <!-- Advertisment creation -->
+        <div class="container">
+            <div class="columns">
+                <div class="column is-full">
+                    <h1 class="title">New Advertisment</h1>
+                    <form>
+                        <textarea name="message" class="textarea" placeholder="Describe the object to buy or to sell" required></textarea>
+                        <label for="file" class="button is-left publish-button is-danger is-rounded">Select Image:
+                            <input type="file" name="file" id="file" accept="image/*" required class="button is-left publish-button is-danger is-rounded">
+                            <p class="FileSelected"></p>
+                        </label>
+
+                        <div class="onSaleToBuy">
+                            <h2>Are hoy selling or looking for it?</h2>
+                            <label for="onSale"><input type="radio" id="onSale" name="onSale" value="true" checked>On Sale</label>
+                            <label for="toBuy"><input type="radio" id="toBuy" name="onSale" value="false">To Buy</label>
+                        </div>
+
+                        <div class="price">
+                            <label for="price">Selling price: <input type="number" name="price" step="0.01" min="0" required></label>
+                        </div>
+                        
+                        <button class="button is-primary is-pulled-right is-info is-rounded publish-button" disabled>Publish</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="footer-title"></p>
+            <p class="all-rights-reserved">All rights reserved according to UE legal frame</p>
+        </footer>
+
+        <script type="module" src="js/new-advertisment.js"></script>
+    </body>
+</html>

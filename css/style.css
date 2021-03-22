@@ -1,0 +1,238 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-image: radial-gradient(#FAFEBD 20%, transparent 20%),
+    radial-gradient(#9fc8e0 20%, transparent 20%);
+  background-color: whitesmoke;
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.623);
+  color: whitesmoke;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  line-height: 3rem;
+}
+
+/* Container */ 
+.container {
+  margin-top: 1.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.623);
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  line-height: 3rem;
+  width: 100%;
+  padding: 0.2rem 1rem;
+}
+
+.web-title, .footer-title {
+  color: whitesmoke;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+#search {
+  width: 20%;
+}
+
+/* Loader */ 
+/* Global Errors */
+.lds-roller, .global-errors {
+  padding: 10%;
+  z-index: 1;
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 105%;
+  overflow: auto;
+  background-color: whitesmoke;
+}
+
+.lds-roller.hidden, .global-errors.hidden {
+  display: none;
+}
+
+.lds-roller div {
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9fc8e0 ;
+  margin: 15px 0 0 15px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cards */
+.advertisments-list {
+  display: inline;
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  margin: 5rem auto;
+}
+
+/* Delete and Edit buttons */
+.card-footer-item {
+  padding: 0rem;
+}
+.card-footer-item button {
+  height: 100%;
+  width: 100%;
+}
+
+/* new tweets or login */
+.new-advertisment {
+  position: fixed;
+  left: 1rem;
+  bottom: 2rem;
+  margin: 3rem 1rem;
+}
+
+.login-register.buttons {
+  padding: 2rem;
+}
+
+/* Log Out */
+.log-out-button {
+  position: fixed;
+  right: 1rem;
+  bottom: 2rem;
+  margin: 3rem 1rem;
+}
+
+/* Publish Button */
+.publish-button {
+  margin: 1rem;
+}
+
+/* File input */
+#file {
+  visibility: hidden;
+  width: 0;
+}
+
+label {
+  justify-content: center;
+}
+

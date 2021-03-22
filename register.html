@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <p class="web-title"></p>
+    </header>
+
+    <!-- Loading -->
+    <div class="lds-roller hidden">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Global errors -->
+    <div class="global-errors hidden"></div>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column is-four-fifths">
+                <h1 class="title">Register</h1>
+                <form novalidate>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input name="email" class="input" type="email" placeholder="Email" required>
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <label for password>Password:
+                                <input id="password" name="password" class="input" type="password" placeholder="Password" placeholder="Password" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <span name="message"></span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <label for password-confrim>Confirm password:
+                                <input id="password-confirm" title="Different passwords, must be the same" name="password-confirm" class="input" type="password" placeholder="Confrim password" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <span name="message"></span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-info is-rounded" disabled> <!-- Put the button disablead and only change it when the info required is OK-->
+                                Register
+                            </button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="column"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-title"></p>
+        <p class="all-rights-reserved">All rights reserved according to UE legal frame</p>
+    </footer>
+
+    <script type="module" src="js/register.js"></script>
+</body>
+
+</html>

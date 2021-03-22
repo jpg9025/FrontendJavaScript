@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <p class="web-title"></p>
+
+            <input id="search" class="input is-success is-small is-rounded" type="search" placeholder="Search">
+        </header>
+
+        <!-- Loading -->
+        <div class="lds-roller hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Error controller -->
+        <div class="global-errors hidden"></div>
+
+        <!-- Advertisment detail -->
+        <h1>Antes venían a verte, ahora no quieren ni verte</h1>
+
+        <!-- New Advertisment button-->
+        <div class="new-advertisment">
+            <a href="/new-advertisment.html" class="button is-primary is-hidden new-advertisment-button is-rounded is-info">New Add</a>
+            <span class="is-hidden login-register-buttons">
+                <a href="/login.html" class="button is-primary is-info">Login</a>
+                <a href="/register.html" class="button is-primary is-info">Register</a>
+            </span>
+        </div>
+
+        <!-- Log Out -->
+        <div class="log-out">
+            <a href="/login.html" class="button is-hidden log-out-button is-rounded is-info">Log Out</a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="footer-title"></p>
+            <p class="all-rights-reserved">All rights reserved according to UE legal frame</p>
+        </footer>
+
+        <script type="module" src="js/advertismentDetail.js"></script>
+    </body>
+</html>
