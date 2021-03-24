@@ -187,8 +187,6 @@ footer {
 }
 
 .card {
-  height: 100%;
-  width: 100%;
   margin: 5rem auto;
 }
 
@@ -236,3 +234,7 @@ label {
   justify-content: center;
 }
 
+/* On Sale To Buy */
+.onSaleToBuy, .price {
+  font-size: 2rem;
+}

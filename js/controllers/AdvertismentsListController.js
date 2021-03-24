@@ -2,6 +2,9 @@ import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
 import { advertismentView } from '../views.js';
 import DeleteButtonController from './DeleteButtonController.js';
+import AdvertismentDetailController from './AdvertismentDetailController.js';
+
+const BASE_URL = 'http://127.0.0.1:8000';
 
 export default class AdvertismentsListController extends BaseController {
 
@@ -18,9 +21,12 @@ export default class AdvertismentsListController extends BaseController {
     render(advertisments) {
         this.element.innerHTML = '';  // Delete all the advertisments that could appear, we need it empty to call later loadAdvertisments and avoid duplication of info
         for (const advertisment of advertisments) {
-            const cardWrapper = document.createElement('div');
-            //cardWrapper.setAttribute("id","card-Wrapper");
+            const advDetailController = new AdvertismentDetailController(advertisment);
+            const cardWrapper = document.createElement('a');
             cardWrapper.classList.add('card-wrapper');
+            cardWrapper.setAttribute('href','detail.html');
+            //cardWrapper.setAttribute('href',`${BASE_URL}/api/messages/${advertisment.id}`);
+            cardWrapper.setAttribute('target',"blank");
             cardWrapper.innerHTML = advertismentView(advertisment);
             const deleteButton = cardWrapper.querySelector('button');
             if (deleteButton) {

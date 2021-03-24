@@ -1,11 +1,11 @@
-import AdvertismentsListController from './controllers/AdvertismentsListController.js';
+import dataService from './services/DataService.js';
 import LoaderController from './controllers/LoaderController.js';
 import ErrorController from './controllers/ErrorController.js';
 import NewAdvertismentOrLoginController from './controllers/NewAdvertismentOrLoginController.js'
 import SearchController from './controllers/SearchController.js';
 import TitleController from './controllers/TitleController.js';
 import LogOutController from './controllers/LogOutController.js';
-import SelectController from './controllers/SelectController.js';
+import AdvertismentDetailController from './controllers/AdvertismentDetailController.js';
 
 // browser publish the even DOMContentLoaded throw window when all HTML is loaded
 window.addEventListener('DOMContentLoaded', async (event) => {
@@ -24,18 +24,14 @@ window.addEventListener('DOMContentLoaded', async (event) => {
   const footer = document.querySelector('.footer-title');
   const footerController = new TitleController(footer);
 
-  // AdvertismentsListController is the controller on charge of <main class="advertisments-list"></main>
-  const advertismentList = document.querySelector('.advertisments-list');
-  const controller = new AdvertismentsListController(advertismentList);
-  controller.loadAdvertisments();
+  // AdvertismentDetailController
+  const advertismentDetail = document.querySelector('.advertisment-detail');
+  const advertisment = dataService.getAdvertismentById();
+  const advDetailController = new AdvertismentDetailController(advertisment);
 
   // SearchController
   const searchInput = document.querySelector('input[type="search"]');
   new SearchController(searchInput);
-
-  // SelectController
-  const selectorController = document.querySelector('.selector');
-  new SelectController(selectorController);
 
   // Error controller is the controller of the errors <div class="global-errors hidden">
   const errorsElement = document.querySelector('.global-errors');
