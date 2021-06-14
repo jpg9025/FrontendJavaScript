@@ -24,7 +24,7 @@ export default class AdvertismentsListController extends BaseController {
             const advDetailController = new AdvertismentDetailController(advertisment);
             const cardWrapper = document.createElement('a');
             cardWrapper.classList.add('card-wrapper');
-            cardWrapper.setAttribute('href','detail.html');
+            cardWrapper.setAttribute('href',`detail.html?id=${advertisment.id}`);
             //cardWrapper.setAttribute('href',`${BASE_URL}/api/messages/${advertisment.id}`);
             cardWrapper.setAttribute('target',"blank");
             cardWrapper.innerHTML = advertismentView(advertisment);

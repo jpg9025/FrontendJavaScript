@@ -26,8 +26,11 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
   // AdvertismentDetailController
   const advertismentDetail = document.querySelector('.advertisment-detail');
-  const advertisment = dataService.getAdvertismentById();
-  const advDetailController = new AdvertismentDetailController(advertisment);
+  const params = new URLSearchParams(document.location.search);
+  const id = parseInt(params.get("id"));
+  const advertismentData = await dataService.getAdvertismentById(id);
+  const controller = new AdvertismentDetailController(advertismentDetail);
+  controller.loadAvertismentDetail(id);
 
   // SearchController
   const searchInput = document.querySelector('input[type="search"]');

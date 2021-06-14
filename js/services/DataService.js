@@ -33,28 +33,17 @@ export default {
     },
 
     getAdvertismentById: async function(id) {
-        const data = await Promise.all([
-            this.getUser(),
-            this.get(`${BASE_URL}/api/messages/`) // No entiendo porqué no me recibe los datos directamente del anuncio concreto con `${BASE_URL}/api/messages/${id}`
-        ]);
-        try {
-            for (var datos of data) {
-                if (datos.id === id) {
-                    const message = datos[0];
-                    const image = datos[1];
-                    const onSale = datos[2];
-                    const price = datos[3];
-                    const aurhor = datos[5];
-                    console.log(message)
-                }
-            } return datos
-        } catch (error) {
-            if (error.statusCode === 404) {
-                return null
-            } else {
-                throw error
-            }
-        }
+        const dataUser = await (this.getUser());
+        const advertisment = await this.get(`${BASE_URL}/api/messages/${id}`);
+         return {
+            id: advertisment.id,
+            message: advertisment.message.replace(/(<([^>]+)>)/gi, ""), // This regular expresion, inserted with replace, avoid the inyection of HTML code
+            date: advertisment.createdAt || advertisment.updatedAt,
+            image: advertisment.image,
+            author: dataUser.username || 'Unkown', // replacing advertisment.user.username for user.username if the username is empty it will run 
+            onSale: advertisment.onSale,
+            price: advertisment.price
+        };
     },
 
     url: function(url, params={}) {

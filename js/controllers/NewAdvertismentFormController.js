@@ -55,9 +55,6 @@ export default class NewAdvertismentFormController extends BaseController {
                 onSale: this.element.elements.onSale.value,
                 price: this.element.elements.price.value
             }
-
-            console.log(this.element.elements.onSale.value);
-            console.log(advertisment.onSale);
             
             if (this.element.elements.file.files.length > 0) { // is this.element.elements. file becuase name=file in HTML <input type="file" name="file" accept="image/*">
                 advertisment.image = this.element.elements.file.files[0];
