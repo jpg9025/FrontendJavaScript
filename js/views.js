@@ -102,12 +102,10 @@ export const advertismentDetailView = (advertisment) => {
             <p class="title is-4">${advertisment.author}</p>
         </div>
         <div class="onSaleToBuy">
-            ${onSaleToBuyHTML}
-            <p>:</p>
+            ${onSaleToBuyHTML} <span> : </span>
         </div>
         <div class="price">
-            ${advertisment.price}
-            <p>€</p>
+            ${advertisment.price} <span> €</span>
         </div>
     </div>
     <div class="content">

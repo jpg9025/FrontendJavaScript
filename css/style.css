@@ -238,3 +238,13 @@ label {
 .onSaleToBuy, .price {
   font-size: 2rem;
 }
+
+.card-image {
+  margin: auto;
+  max-width: 75vw;
+}
+
+.content {
+  margin: 1rem;
+  padding: 0.5rem;
+}
